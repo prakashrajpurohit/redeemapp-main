@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/img_logo"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/img_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="AllowBackup,UnusedAttribute"
+        tools:replace="android:allowBackup,android:theme,android:usesCleartextTraffic">
+        <activity
+            android:name=".Activity.PaypalCheckout"
+            android:exported="true">
+            <intent-filter android:autoVerify="true" >
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "example://gizmos” -->
+                <data
+                    android:host="wowcodes.shop"
+                    android:path="/raffle/paypal/checkout.php"
+                    android:scheme="https" />
+
+            </intent-filter>
+        </activity>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+
+        <activity
+            android:name=".Activity.Paypalpay"
+            android:exported="true" />
+
+        <activity android:name=".ADSHOW" />
+        <activity android:name=".Activity.YourBidsActivity" />
+        <activity android:name=".Activity.IntroductionActivity" />
+        <activity android:name=".Activity.ChangepassActivity" />
+        <activity android:name=".Activity.ForgotPasswordActivity" />
+        <activity android:name=".Activity.PhoneVerificationActivity" />
+        <activity android:name=".Activity.PhoneVerificationnActivity" />
+        <activity
+            android:name=".Activity.RazorpayActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <data
+                    android:host="rzp.io"
+                    android:scheme="io.rzp" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="com.razorpay.RzpTokenReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="rzp.device_token.share" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.onesignal.GcmBroadcastReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.razorpay.CheckoutActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@style/CheckoutTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <data
+                    android:host="rzp.io"
+                    android:scheme="io.rzp" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.AllBidderActivity" />
+        <activity android:name=".Activity.AllUserBidderActivity" />
+        <activity android:name=".Activity.GetOrderActivity" />
+        <activity android:name=".Activity.GetCoinTraActivity" />
+        <activity
+            android:name=".Activity.WalletPassbookActivity"
+            android:exported="true" />
+        <activity android:name=".Activity.IMPFeedbackActivity" />
+        <activity android:name=".Activity.PrivacyPolicyActivity" />
+        <activity android:name=".Activity.VisitWebsiteActivity" />
+        <activity android:name=".Activity.LiveDetailActivity" />
+        <activity android:name=".Activity.AuctionDetailActivity" />
+        <activity android:name=".Activity.RegisterActivity" />
+        <activity android:name=".Activity.LoginActivity" />
+        <activity
+            android:name=".Activity.MainActivity"
+            android:exported="true">
+        </activity>
+        <activity android:name=".Activity.EditProfileActivity" />
+        <activity android:name=".Activity.GetCoinActivity" />
+        <activity android:name=".CheckoutActivityJava" />
+        <activity android:name=".Activity.CategoryDetailsActivity" />
+        <activity android:name=".Activity.RaffleDetailActivity" />
+        <activity android:name=".Activity.ViewAllTicketsActivity" />
+        <activity android:name=".Activity.WebViewActivity" />
+        <activity android:name=".Activity.NoInternetActivity" />
+        <activity android:name=".Activity.OfferDetailActivity" />
+        <activity android:name=".Activity.mpesaActivity" />
+        <activity
+            android:name=".Activity.StartSplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" /> <!-- TODO:  You can change The API Key with your live razorpay key below -->
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_test_DIoVyzJUUK6w5t" />
+
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.onesignal.HmsMessageServiceOneSignal"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.huawei.push.action.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.onesignal.BootUpReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.onesignal.UpgradeReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.onesignal.NotificationOpenedActivityHMS"
+            android:exported="true"
+            android:noHistory="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".NotificationExtenderExample"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE">
+            <intent-filter>
+                <action android:name="com.onesignal.NotificationExtender" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

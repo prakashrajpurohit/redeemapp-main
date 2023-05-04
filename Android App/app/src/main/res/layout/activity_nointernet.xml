@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/nointernetlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:background="@color/white">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/nointernet"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Whoops!"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:fontFamily="@font/opensansregular"
+            android:textStyle="bold"
+            android:textSize="30dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="We can't seem to find what you\n are looking for \n Please check your internet connection"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:fontFamily="@font/opensansregular"
+
+            android:layout_marginTop="5dp"
+            android:textSize="16dp"/>
+
+        <LinearLayout
+            android:id="@+id/layouttryagain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/btn_bg1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" Try Again "
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:fontFamily="@font/opensansregular"
+
+                android:textSize="16dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

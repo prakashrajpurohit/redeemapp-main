@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".Activity.MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        app:cardCornerRadius="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="129dp"
+                android:layout_height="89dp"
+                android:layout_gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="7dp"
+                android:paddingBottom="5dp"
+                app:cardCornerRadius="7dp">
+
+                <ImageView
+                    android:id="@+id/imageview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/img_background"
+                    android:scaleType="fitXY" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:orientation="vertical"
+                android:paddingBottom="2dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/opensansmediam"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="Lowest Unique Bid:-"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/tx_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensansbold"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="5dp"
+                        android:text="Product Name"
+                        android:textColor="@color/white"
+                        android:textSize="17dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensansmediam"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="Won by:-"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/tx_wlbid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensansbold"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="5dp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="15dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensansbold"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="High Unique Bid:-"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensansbold"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="Won by:-"
+
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/tx_whbid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensansbold"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="5dp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="15dp"/>
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tx_winbid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensansbold"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="5dp"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="15dp"/>
+
+                <TextView
+                    android:id="@+id/tx_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensansbold"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="2dp"
+                    android:paddingRight="5dp"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="15dp"/>
+
+                <TextView
+                    android:id="@+id/tx_lbid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensansbold"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="15dp"/>
+
+                <TextView
+                    android:id="@+id/tx_hbid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensansbold"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="5dp"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="17dp"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

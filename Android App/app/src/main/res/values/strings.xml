@@ -1,0 +1,37 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- TODO:  You can change App name below -->
+    <string name="app_name">PrizeX</string>
+    <!-- TODO:  You can change the  Storage Permission Error Message Below -->
+    <string name="msg_rationale">You need to provide Storage access to update profile pic</string>
+    <string name="txt_info">Info</string>
+    <string name="txt_warning">Warning</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- TODO:  You can change the Onboarding Screen First Text Below -->
+    <string name="slidetitle1" tools:ignore="Missingtext_translation">Bid, Play, Redeem</string>
+    <string name="secondtittle1" tools:ignore="Missingtext_translation">Auctions</string>
+    <string name="thirdtittle1" tools:ignore="Missingtext_translation">Raffle</string>
+    <string name="fourthtittle1" tools:ignore="Missingtext_translation">Redeem</string>
+    <string name="fifthtittle1" tools:ignore="Missingtext_translation">Lets start winning</string>
+    <!-- TODO:  Hidden (no need to change) -->
+    <string name="slidetitle2" tools:ignore="Missingtext_translation">Huge Discounts</string>
+    <string name="secondtittle2" tools:ignore="Missingtext_translation">Get your winnings delivered in 7 days</string>
+    <string name="thirdtittle2" tools:ignore="Missingtext_translation">Refer your friends and earn free coins</string>
+    <!-- TODO:  You can change the Onboarding Screen Third Page Text Below -->
+    <string name="slidetitle3" tools:ignore="Missingtext_translation">and win awesome items</string>
+    <string name="secondtittle3" tools:ignore="Missingtext_translation">bid on items and win them by placing unique bid</string>
+    <string name="thirdtittle3" tools:ignore="Missingtext_translation">purchase tickets and a lucky winner wins it</string>
+    <string name="fourthtittle3" tools:ignore="Missingtext_translation">you can also redeem your coins for items</string>
+    <string name="fifthtittle3" tools:ignore="Missingtext_translation">best of luck!!</string>
+    <!-- TODO:  You can change the Got it Text Below -->
+    <string name="gotit_txt" tools:ignore="Missingtext_translation">I got it!</string>
+    <!-- TODO:  You can change the Skip Text Below -->
+    <string name="skip_txt" tools:ignore="Missingtext_translation">Skip</string>
+    <!-- TODO:  You can change the Continue Text Below -->
+    <string name="txt_continue" tools:ignore="Missingtext_translation">Continue</string>
+    <string name="text_200" tools:ignore="Missingtext_translation">Every 100th \n ticket wins</string>
+    <string name="tc">Terms and Conditions </string>
+    <string name="privacy">Privacy Policy</string>
+    <string name="fourthtittle2" tools:ignore="Missingtext_translation">Fast Deliveries</string>
+    <string name="fifthtittle2" tools:ignore="Missingtext_translation">Refer and Earn</string>
+
+</resources>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:windowCloseOnTouchOutside="true"
+    android:windowIsTranslucent="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_tab"
+    android:orientation="vertical"
+    android:layout_margin="30dp"
+    android:paddingTop="7dp"
+    android:paddingLeft="7dp"
+    android:paddingBottom="7dp"
+    android:paddingRight="7dp">
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_alignParentRight="true" android:text="X"
+        android:textColor="#FFF" android:background="@color/colorPrimary"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_margin="5dp" android:layout_height="25dp"
+        android:paddingRight="0dp"
+        android:paddingTop="0dp"
+        android:layout_width="25dp" android:textSize="12sp" android:textStyle="bold" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="22sp"
+        android:text=""/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="40dp"
+            android:text="Seller Profile"
+            android:textAlignment="center"
+            android:textSize="15sp" />
+
+        <FrameLayout
+            android:layout_width="152dp"
+            android:layout_height="152dp"
+            android:layout_gravity="center">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageSeller"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/img_user"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="0dp" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/sellername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/opensansregular"
+            android:hint="seller name"
+            android:textAlignment="center"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/aboutSeller"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:text="about me"
+            android:scrollbars = "vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/opensansregular"
+            android:textAlignment="center"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/linkSeller"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="40dp"
+            android:autoLink="all"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_bg1"
+            android:fontFamily="@font/opensansregular"
+            android:text="know more"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+    </RelativeLayout>
+
+
+

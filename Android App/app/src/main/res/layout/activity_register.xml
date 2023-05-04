@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context=".Activity.LoginActivity">
+
+    <include layout="@layout/activity_loading"></include>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/opensansbold"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/btncolor"
+                android:textSize="30dp"
+                android:visibility="gone">
+
+            </TextView>
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/imgregister">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/opensansmediam"
+                android:text="Name"
+                android:textSize="18dp">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/txtYourName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/et_border"
+                android:hint="enter your name"
+                android:textSize="18dp"
+                android:paddingLeft="10dp">
+
+            </EditText>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/opensansmediam"
+                android:text="Email"
+                android:textSize="18dp">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/txtEmailId"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/et_border"
+                android:hint="enter your email id"
+                android:inputType="textEmailAddress"
+                android:textSize="18dp"
+                android:paddingLeft="10dp">
+
+            </EditText>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/opensansmediam"
+                android:text="Mobile Number"
+                android:textSize="18dp"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_border"
+
+                android:orientation="horizontal">
+
+                <com.rilixtech.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    app:ccp_defaultNameCode="IN"
+                    android:layout_gravity="center"/>
+
+                <EditText
+                    android:id="@+id/edForgotNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@android:color/transparent"
+                    android:hint="enter your mobile number"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+                    android:text=""
+                    android:textSize="18dp"></EditText>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/opensansmediam"
+                android:text="Password"
+                android:textSize="18dp">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/edPass"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/et_border"
+                android:hint="set a password"
+                android:textSize="18dp"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp">
+
+            </EditText>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rd"
+                android:layout_marginTop="10dp">
+
+                <CheckBox
+                    android:id="@+id/checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:fontFamily="@font/opensansmediam"
+                    android:text="By Continuing you agree to our"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/txtPrivacy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensansmediam"
+                    android:text=" Privacy Policy,TOS"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12dp">
+                </TextView>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/txtLoginActi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_bg1"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Register"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/edRegisterCode"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/et_border"
+                android:hint="Have A Refferal Code?"
+                android:inputType="number"
+                android:textSize="18dp"
+                android:paddingLeft="10dp">
+            </EditText>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

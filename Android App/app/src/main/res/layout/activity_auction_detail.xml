@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#ffffff"
+    android:orientation="vertical"
+    tools:context=".Activity.LiveDetailActivity">
+
+    <include layout="@layout/activity_toolbar" />
+    <include layout="@layout/activity_loading" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/txtClose"
+            android:layout_width="358dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="35dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginEnd="18dp"
+            android:fontFamily="@font/opensansmediam"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:textStyle="bold"
+            android:text="Check Your Internet Connection!!"
+            android:textColor="@color/black"
+            android:textSize="17dp" />
+
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:id="@+id/imgItemImg"
+                    android:background="@drawable/img_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:id="@+id/txtSetName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="130dp"
+                    android:fontFamily="@font/opensansmediam"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="17dp"
+                    android:visibility="invisible" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/txtBids"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="130dp"
+                    android:background="@drawable/et_border12"
+                    android:fontFamily="@font/opensansbold"
+                    android:paddingLeft="7dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="7dp"
+                    android:paddingBottom="5dp"
+                    android:text="All Biddders"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/txtYourr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/et_border12"
+                    android:fontFamily="@font/opensansbold"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="5dp"
+                    android:text="Your Bids"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/txtPay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-1dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginRight="-5dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_toStartOf="@+id/txtYourr"
+                    android:background="#ffffff"
+                    android:drawableRight="@drawable/ic_star"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/opensansmediam"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="Bid For 1"
+                    android:textColor="@color/black"
+                    android:textSize="17dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtBidAbove"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/opensansbold"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="5dp"
+                    android:text="Bid Above 1"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/edForgotNumbid"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/et_bordergray11"
+                    android:hint="eg. 1.00"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true">
+
+                </EditText>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/opensansbold"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="1dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="1dp"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:visibility="gone"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/opensansbold"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="2dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="2dp"
+                    android:text="OR"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:visibility="visible"/>
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/opensansbold"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="1dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="1dp"
+                    android:text="Bid Range"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:visibility="visible"/>
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/opensansbold"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="1dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="1dp"
+                    android:text="Place multiple bids using this feature"
+                    android:textColor="#5A5656"
+                    android:textSize="15dp"
+                    android:visibility="visible"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:visibility="visible">
+
+                    <EditText
+                        android:id="@+id/edRange1"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_weight="1.33"
+                        android:background="@drawable/et_bordergray11"
+                        android:hint="eg. 1.01"
+                        android:inputType="numberDecimal"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true">
+
+                    </EditText>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.33"
+                        android:fontFamily="@font/opensansbold"
+                        android:gravity="center"
+                        android:text="to"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+
+                    <EditText
+                        android:id="@+id/edRange2"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_weight="1.3"
+                        android:background="@drawable/et_bordergray11"
+                        android:hint="eg. 2.00"
+                        android:inputType="numberDecimal"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true">
+
+                    </EditText>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtExt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/opensansbold"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="5dp"
+                    android:text="Something Went Wrong!!"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15dp" />
+
+
+                <TextView
+                    android:id="@+id/txtBid"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/btn_bg1"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Submit Bid"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/darkgray"></View>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_gravity="left"
+                android:textSize="20sp"
+                android:text="How does this auction works?"
+                android:paddingLeft="5dp"
+                android:paddingTop="15dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="15dp"
+                android:fontFamily="@font/opensansbold"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="5dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:padding="5dp"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/a"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="0dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/lub1"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="left"
+                            android:textSize="15dp"
+                            android:text="This is Highest Unique Bid"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:fontFamily="@font/opensansbold"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_height="wrap_content">
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="left"
+                            android:textSize="13dp"
+                            android:drawablePadding="3dp"
+                            android:drawableTint="@color/darkgray"
+                            android:text="You need to try and place the highest bid that nobody else places. For eg: If you bid 1.00 and you are the only person who places it then that bid is 'UNIQUE'. At the end the person with highest and unique bid will win.."
+                            android:fontFamily="@font/opensansmediam"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <!--Step 2-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="5dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:padding="5dp"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/b"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="0dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="left"
+                            android:textSize="15dp"
+                            android:text="A 'UNIQUE' bid can become 'NOT-UNIQUE' anytime"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:fontFamily="@font/opensansbold"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_height="wrap_content">
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="left"
+                            android:textSize="13dp"
+                            android:drawablePadding="3dp"
+                            android:drawableTint="@color/darkgray"
+                            android:text="It is possible that a bid which you placed was 'UNIQUE' at the time of placing it but if any other user places a bid of same amount then your bid will become 'NOT-UNIQUE' as both of the users have placed the same bid"
+                            android:fontFamily="@font/opensansmediam"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <!--Step 3-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="5dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:padding="5dp"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/c"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="0dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="left"
+                            android:textSize="15dp"
+                            android:text="For every bid you place you will be charged few coins"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:fontFamily="@font/opensansbold"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_height="wrap_content">
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="left"
+                            android:textSize="13dp"
+                            android:drawablePadding="3dp"
+                            android:drawableTint="@color/darkgray"
+                            android:text="The fee will be deducted from your wallet when you place the bid. Please note that this coins are non-reffundable."
+                            android:fontFamily="@font/opensansmediam"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <!--Step 4-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="5dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:padding="5dp"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/d"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="0dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="left"
+                            android:textSize="15dp"
+                            android:text="At the end the person with the highest and unique bid will win the auction"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:fontFamily="@font/opensansbold"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_height="wrap_content">
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="left"
+                            android:textSize="13dp"
+                            android:drawablePadding="3dp"
+                            android:drawableTint="@color/darkgray"
+                            android:text="which means the person who has the highest and unique bid is the winner"
+                            android:fontFamily="@font/opensansmediam"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="15dp"
+                android:text="Best of Luck!"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:fontFamily="@font/opensansbold"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content">
+            </TextView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

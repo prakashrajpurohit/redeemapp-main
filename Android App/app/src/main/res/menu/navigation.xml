@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_you"
+        android:checked="true"
+        android:icon="@drawable/ic_profile"
+        android:title="You"
+        app:showAsAction="ifRoom|withText" />
+    <item
+        android:id="@+id/action_winner"
+        android:checked="true"
+        android:icon="@drawable/ic_won"
+        android:title="Winners"
+        app:showAsAction="ifRoom|withText" />
+    <item
+        android:id="@+id/action_auction"
+        android:checked="true"
+        android:icon="@drawable/ic_playzone"
+        android:title="Play Zone"
+        app:showAsAction="ifRoom|withText" />
+    <item
+        android:id="@+id/action_shop"
+        android:checked="true"
+        android:icon="@drawable/ic_shop"
+        android:title="Coin Shop"
+        app:showAsAction="ifRoom|withText" />
+    <item
+        android:id="@+id/action_earn"
+        android:checked="true"
+        android:icon="@drawable/ic_earnn"
+        android:title="Earn Coins"
+        app:showAsAction="ifRoom|withText" />
+
+
+</menu>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#C81F70</color>
+    <color name="colorPrimaryDark">#C81F70</color>
+    <color name="colorAccent">#C81F70</color>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+
+    <color name="darkgray">#8e8e8e</color>
+    <color name="lightgray">#CACACA</color>
+    <color name="gray">#fafafa</color>
+    <color name="redd">#C81F70</color>
+    <color name="lightgrayy">#F1EDED</color>
+
+    <color name="selected1">#C81F70</color>
+    <color name="selected2">#C81F70</color>
+    <color name="selected3">#C81F70</color>
+    <color name="btncolor">#C81F70</color>
+    <color name="transprant">#00000000</color>
+    <!-- TODO:  You can change the Onboarding Page colour below -->
+    <color name="docotorcolor">#C81F70</color>
+    <color name="lightblack">#dcdcdc</color>
+    <color name="black2">#0f1012</color>
+    <color name="pink">#ED1B76</color>
+    <color name="purple">#9C27B0</color>
+    <color name="paypal">#0070BA</color>
+
+
+</resources>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.GetCoinTraActivity">
+    <include layout="@layout/activity_toolbar"
+        android:visibility="gone">
+    </include>
+
+    <include layout="@layout/activity_loading">
+
+    </include>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/txtShare"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensansmediam"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:drawablePadding="5dp"
+            android:drawableTint="@color/darkgray"
+
+            android:drawableLeft="@drawable/ic_addfriend"
+            android:text="Invite friends &amp; win free coin"
+            android:textColor="@color/darkgray"
+            android:textSize="17dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/lightgray"></View>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="30dp"
+
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txtGetCoin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/opensansbold"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:layout_marginRight="5dp"
+                android:paddingBottom="5dp"
+                android:layout_toLeftOf="@+id/imgPrivacy"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="20dp"/>
+
+            <ImageView
+                android:id="@+id/imgPrivacy"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_information"
+                android:visibility="gone">
+            </ImageView>
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/lightgray"></View>
+
+
+
+        <TextView
+            android:id="@+id/txtGetCoinHis"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensansmediam"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:drawablePadding="5dp"
+
+            android:drawableLeft="@drawable/ic_transfer"
+            android:text="Coin Transactions"
+            android:textColor="@color/darkgray"
+            android:textSize="17dp"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/lightgray">
+
+        </View>
+
+        <TextView
+
+            android:id="@+id/text_tran"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensansmediam"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:drawablePadding="5dp"
+
+            android:drawableLeft="@drawable/ic_transfer"
+            android:text="Coin Purchases"
+            android:textColor="@color/darkgray"
+            android:textSize="17dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/lightgray"></View>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensansbold"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:text="Coin Shop 🛒"
+            android:textColor="@color/black"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensansregular"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:text="Purchase coins and use them to place bids :)"
+            android:textColor="@color/darkgray"
+            android:textSize="17dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+</LinearLayout>
